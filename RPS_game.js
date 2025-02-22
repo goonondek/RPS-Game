@@ -10,11 +10,11 @@ Description: This is a simple rock, paper, scissors game that is played in the c
 
 */
 
-let humanScore = 0;
+let humanScore = 0; // Initialize scores to 0
 let computerScore = 0;
 
 function getComputerChoice() {
-    const randomNumber = Math.floor(Math.random() * 3);
+    const randomNumber = Math.floor(Math.random() * 3); // Use 3 instead of 4
     switch (randomNumber) {
         case 0:
             return "rock";
@@ -62,6 +62,9 @@ function displayScore() {
 }
 
 function playGame() {
+    humanScore = 0; // Reset scores at the start of each game
+    computerScore = 0;
+
     for (let i = 0; i < 5; i++) { // Play 5 rounds
         const humanChoice = getHumanChoice();
         const computerChoice = getComputerChoice();
